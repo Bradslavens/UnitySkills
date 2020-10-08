@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject square;
+    
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0)){
+            Instantiate(square);
+        }
     }
 }
