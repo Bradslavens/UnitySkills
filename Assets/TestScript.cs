@@ -6,7 +6,6 @@ public class TestScript : MonoBehaviour
 {
     public bool isDraggable = true;
     public bool isDragged = false;
-    public Transform transform;
 
 
     // Update is called once per frame
@@ -14,7 +13,7 @@ public class TestScript : MonoBehaviour
     {
         if(isDragged){
 
-            transform.position = Input.mousePosition;
+            transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition); 
         }
     }
 
