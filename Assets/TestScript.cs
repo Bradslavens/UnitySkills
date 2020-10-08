@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    public GameObject square;
-    
+    public Rigidbody2D bullet;
+    public Transform barrelPosition;
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0)){
-            Instantiate(square);
+            Rigidbody2D bulletInstance;
+            bulletInstance = Instantiate(bullet, barrelPosition.position, barrelPosition.rotation) as Rigidbody2D;
+            bulletInstance.AddForce(barrelPosition.up * 1000f);
         }
     }
 }
