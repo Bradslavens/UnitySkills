@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour
 {
-    private Rigidbody2D rigibody2D;
+    private Rigidbody2D rigidbody2D;
     public float speed;
 
     private void Start() {
-        rigibody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() {
@@ -16,8 +16,8 @@ public class TestScript : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
-        rigibody2D.AddForce(movement * speed);
-
-
+        rigidbody2D.AddForce(movement * speed);
+        
     }
+
 }
