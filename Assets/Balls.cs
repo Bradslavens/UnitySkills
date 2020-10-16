@@ -10,6 +10,7 @@ public class Balls : MonoBehaviour
     private void Update() {
         if(Input.GetMouseButtonDown(0)){
             cannonBall.AddForce(barrelPosition.up *1000f);
+            cannonBall.gravityScale = 1;
         }
     }
 }
