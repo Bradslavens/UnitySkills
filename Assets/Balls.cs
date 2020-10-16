@@ -9,9 +9,7 @@ public class Balls : MonoBehaviour
 
     private void Update() {
         if(Input.GetMouseButtonDown(0)){
-            Rigidbody2D cannonBallInstance;
-            cannonBallInstance = Instantiate(cannonBall, barrelPosition.position, barrelPosition.rotation) as Rigidbody2D;
-            cannonBallInstance.AddForce(barrelPosition.up *1000f);
+            cannonBall.AddForce(barrelPosition.up *1000f);
         }
     }
 }
