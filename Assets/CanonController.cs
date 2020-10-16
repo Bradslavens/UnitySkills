@@ -5,7 +5,7 @@ using UnityEngine;
 public class CanonController : MonoBehaviour
 { 
     public Rigidbody2D canon;
-    public float rotationSpeed = 0.5f;
+    public float rotationSpeed = 50f;
 
     private void Start() {
         canon.gravityScale = 0;
